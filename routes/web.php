@@ -21,9 +21,9 @@ use App\Http\Controllers\ArticleController;
 //     return view('welcome');
 // });
 
+
 // TUGAS 2
 // PRAKTIKUM 1
-
 // Route::get('/', function () {
 //     echo "Selamat Datang";
 // });
@@ -37,9 +37,30 @@ use App\Http\Controllers\ArticleController;
 // });
 
 // PRAKTIKUM 2
+// Route::get('/', [PageController::class, 'index']);
 
-Route::get('/', [PageController::class, 'index']);
+// Route::get('/about', [HomeController::class, 'about']);
 
-Route::get('/about', [HomeController::class, 'about']);
+// Route::get('/article/{id}', [ArticleController::class, 'article']);
 
-Route::get('/article/{id}', [ArticleController::class, 'article']);
+
+// TUGAS 3
+Route::get('about', function() {
+    return view('about');
+});
+
+Route::get('cart', function() {
+    return view('cart');
+});
+
+Route::get('category', function() {
+    return view('category');
+});
+
+Route::get('contact', function() {
+    return view('contact');
+});
+
+Route::get('details', function() {
+    return view('details');
+});
