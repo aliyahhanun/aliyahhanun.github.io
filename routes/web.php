@@ -45,22 +45,29 @@ use App\Http\Controllers\ArticleController;
 
 
 // TUGAS 3
-Route::get('about', function() {
-    return view('about');
-});
+// Route::get('about', function() {
+//     return view('about');
+// });
 
-Route::get('cart', function() {
-    return view('cart');
-});
+// Route::get('cart', function() {
+//     return view('cart');
+// });
 
-Route::get('category', function() {
-    return view('category');
-});
+// Route::get('category', function() {
+//     return view('category');
+// });
 
-Route::get('contact', function() {
-    return view('contact');
-});
+// Route::get('contact', function() {
+//     return view('contact');
+// });
 
-Route::get('details', function() {
-    return view('details');
+// Route::get('details', function() {
+//     return view('details');
+// });
+
+Route::get('/', function () {
+    return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
